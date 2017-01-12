@@ -1,6 +1,6 @@
 # Price Formatter
 
-Function that converts string, integer or float value  to easy-viewer price format. 
+Function that converts string, integer or float value  to easy-viewer price format string. 
  
 ## Getting Started  
 
@@ -22,14 +22,15 @@ Clone repository:
 To run tests:  
 `python tests.py`
 
-For proper working the format_price function is tested on correct input type value, format values and output string value. Values input test cases  are showed in a table below:   
+To work correctly the format_price function is tested on input type values, input  values format and output string type:  
 
-|                                     INPUT VALUES                                    	| CORRECT SCRIPT STATUS  |
-|:-----------------------------------------------------------------------------------:	|:----------------------:|
-| ints, floats, strings with comma and dot separators                            	|     OK     			 |
-| types except string, int and float                                                	| raises TypeError 	     |
-| strings containing letters, double separators and other symbols, negative ints and floats  	| raises ValueError|
-
+|      TEST CASES      	|                                   INPUT VALUES                                   	| STATUS \ RAISED ERROR |
+|:--------------------:	|:--------------------------------------------------------------------------------:	|:---------------------:|
+|   Valid types  	|                              integer, float, string                              	| OK                    |
+|  Invalid types 	|             Types except string, int and float. In this case - list.             	| TypeError             |
+|  Valid format  	|                        string with comma, string with dot                        	| OK                    |
+| Invalid format 	| negative number, string containing letters,</br> string with double separators  	| ValueError            |
+|   Output string type  	|                 Any valid types and formats. In this case - int.                 	| OK                    |  
 
 
 ## Project Goals
