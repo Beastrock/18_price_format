@@ -26,11 +26,11 @@ To work correctly the format_price function is tested on input type values, inpu
 
 |      TEST CASES      	|                                   INPUT VALUES                                   	| STATUS \ RAISED ERROR |
 |:--------------------:	|:--------------------------------------------------------------------------------:	|:---------------------:|
-|   Valid types  	|                              integer, float, string                              	| OK                    |
-|  Invalid types 	|             Types except string, int and float. In this case - list.             	| TypeError             |
-|  Valid format  	|                        string with comma, string with dot                        	| OK                    |
-| Invalid format 	| negative number, string containing letters,</br> string with double separators  	| ValueError            |
-|   Output string type  	|                 Any valid types and formats. In this case - int.                 	| OK                    |  
+|   Valid types  	|                              integer, float, string                            	  	| OK                    |
+|  Invalid types 	|             Types except string, int and float. In this case - list.            	 	| TypeError             |
+|  Valid format  	|                        string with comma, string with dot                       	 	| OK                    |
+| Invalid format 	| negative number, string containing letters,</br> string with double separators  		| ValueError            |
+| Independence from precision   	|   Three strings with different float part length: 3, 4 and 5.         | OK                    |  
 
 
 ## Project Goals
