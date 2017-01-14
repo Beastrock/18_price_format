@@ -32,22 +32,22 @@ class TestFormatPriceFunction(unittest.TestCase):
         self.assertEqual(price, "10 200 300")
 
     def test_valid_input_type_float(self):
-        price = format_price(10000.999)
-        self.assertEqual(price, "10 000")
+        price = format_price(10000.5)
+        self.assertEqual(price, "10 000.50")
 
     def test_valid_input_format_string_with_dot(self):
-        price = format_price("22000333.555")
-        self.assertEqual(price, "22 000 333")
+        price = format_price("22000333.05")
+        self.assertEqual(price, "22 000 333.05")
 
     def test_valid_input_format_string_with_comma(self):
-        price = format_price("22000333,555")
-        self.assertEqual(price, "22 000 333")
+        price = format_price("22000333,55")
+        self.assertEqual(price, "22 000 333.55")
 
     def test_independence_from_precision(self):
         price1 = format_price("1000.999")
         price2 = format_price("1000.9999")
         price3 = format_price("1000.99999")
-        self.assertEqual((price1, price2, price3), ("1 000", "1 000", "1 000"))
+        self.assertEqual((price1, price2, price3), ("1 000.99", "1 000.99", "1 000.99"))
 
 
 if __name__ == "__main__":
