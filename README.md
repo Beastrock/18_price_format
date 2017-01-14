@@ -1,9 +1,9 @@
 # Price Formatter
 
-Function that converts string, integer or float value  to easy-viewer price format string, for example:  
+Function that converts string, integer or float value  to easy-viewer price format string without rounding, for example:  
 
-+ `10000.50` to `10 000.50`  
-+ `1200.99` to `1 200.99`
++ `10000.5` to `10 000.50`  
++ `1200.9999` to `1 200.99`
 + `100000` and `10000.00` to `10 000`
  
 ## Getting Started  
